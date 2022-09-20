@@ -1,7 +1,7 @@
 import { UnknownPageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 
-export default function Home({ url }: UnknownPageProps) {
+export default function NotFoundPage({ url }: UnknownPageProps) {
   return (
     <div class="min-h-screen bg-indigo-300 dark:bg-current">
       <div class="container mx-auto">
