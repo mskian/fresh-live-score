@@ -14,6 +14,9 @@ Start the project:
 deno task start
 ```
 
+- Auto Reload the Page Every 60 Seconds using Meta Refresh (Temporary)
+- API - <https://github.com/mskian/deno-cricket-api>
+
 ## LICENSE
 
 MIT
