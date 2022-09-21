@@ -1,5 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
+import LinkButton from "../components/LinkButton.tsx";
 
 interface APIData {
   title: string;
@@ -159,7 +160,6 @@ export default function Page({ data, url }: PageProps<APIData | null>) {
             name="description"
             content="Get Real-time Live Cricket Score Update."
           />
-          <meta http-equiv="refresh" content="60" />
           <link rel="canonical" href={url.href} />
           <meta property="og:image" content="/random-score.jpg" />
           <meta property="og:image:alt" content="Live Cricket Score" />
@@ -184,7 +184,10 @@ export default function Page({ data, url }: PageProps<APIData | null>) {
           <meta name="apple-mobile-web-app-title" content="Live Score" />
         </Head>
         <div class="flex flex-col justify-center items-center">
-          <div class="flex flex-initial w-80 dark:bg-gray-500 dark:text-gray-100 bg-indigo-100 border-2 border-current rounded-lg mt-6">
+          <div
+            style="overflow-x:auto;"
+            class="flex flex-initial w-80 dark:bg-gray-500 dark:text-gray-100 bg-indigo-100 border-2 border-current rounded-lg mt-6"
+          >
             <table class="min-w-full shadow-md rounded table-auto border-collapse border border-slate-400 border-current font-bold">
               <tbody>
                 <tr>
@@ -252,6 +255,10 @@ export default function Page({ data, url }: PageProps<APIData | null>) {
               </tbody>
             </table>
           </div>
+          <LinkButton
+            text="Refresh Score"
+            link={url.href}
+          />
           <br />
           <br />
         </div>
